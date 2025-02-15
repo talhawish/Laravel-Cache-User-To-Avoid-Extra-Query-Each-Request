@@ -29,6 +29,21 @@ This ensures that `CachedUserProvider.php` is used, optimizing authentication pe
 
 ---
 
+
+## Keeping User Data Updated
+
+If you are serving user data in an API and want to ensure it remains up to date, you should recache the user data whenever the user model is updated. You can achieve this by handling it in the `updated` method of a `UserObserver`.
+
+Example:
+
+```php
+class UserObserver {
+    public function updated(User $user) {
+        Cache::put('user_' . $user->id, $user);
+    }
+}
+```
+
 ## Benefits
 - Reduces database queries on each authenticated request.
 - Improves application performance.
