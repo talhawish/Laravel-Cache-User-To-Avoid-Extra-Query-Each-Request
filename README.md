@@ -12,7 +12,7 @@ A `CachedUserProvider` has been added to the repository. Developers need to regi
 
 ### Step 2: Register the Service Provider
 
-- **For Laravel 5.5+**, register the service provider in `bootstrap/providers.php`.
+- **For Laravel 11+**, register the service provider in `bootstrap/providers.php`.
 - **For older versions**, register it in `config/app.php` under the `providers` array.
 
 ### Step 3: Override the Auth Provider
