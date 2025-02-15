@@ -2,13 +2,13 @@
 
 ## Overview
 
-This package caches user data to prevent redundant database queries on every authenticated request, improving application performance.
+This Technique helps to prevent redundant database queries on every authenticated request, improving application performance.
 
 ## Installation
 
 ### Step 1: Add `CachedUserProvider.php`
 
-A `CachedUserProvider` has been added to the repository. Developers need to register this provider properly.
+A `CachedUserProvider` has been added to the repository. Developers need paste and register this provider properly.
 
 ### Step 2: Register the Service Provider
 
@@ -17,7 +17,7 @@ A `CachedUserProvider` has been added to the repository. Developers need to regi
 
 ### Step 3: Override the Auth Provider
 
-Modify your main service provider or `AuthServiceProvider` to use the cached user provider instead of the default one:
+Modify your AppServiceProvider or `AuthServiceProvider` to use the cached user provider instead of the default one:
 
 ```php
 Auth::provider('cached', function ($app, array $config) {
